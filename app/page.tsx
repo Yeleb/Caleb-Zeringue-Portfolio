@@ -1,23 +1,23 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-900 text-gray-100">
-   
+      {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800 z-50">
         <nav className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
           <a href="#hero" className="text-xl font-bold">CZ</a>
           <div className="flex gap-3 md:gap-6 text-sm md:text-base">
-  <a href="#about" className="hover:text-violet-400 transition">About</a>
-  <a href="#skills" className="hover:text-violet-400 transition">Skills</a>
-  <a href="#projects" className="hover:text-violet-400 transition">Projects</a>
-  <a href="#experience" className="hover:text-violet-400 transition hidden sm:block">Experience</a>
-  <a href="#experience" className="hover:text-violet-400 transition sm:hidden">Exp</a>
-  <a href="#education" className="hover:text-violet-400 transition hidden sm:block">Education</a>
-  <a href="#education" className="hover:text-violet-400 transition sm:hidden">Education</a>
-</div>
+            <a href="#about" className="hover:text-violet-400 transition">About</a>
+            <a href="#skills" className="hover:text-violet-400 transition">Skills</a>
+            <a href="#projects" className="hover:text-violet-400 transition">Projects</a>
+            <a href="#experience" className="hover:text-violet-400 transition hidden sm:block">Experience</a>
+            <a href="#experience" className="hover:text-violet-400 transition sm:hidden">Exp</a>
+            <a href="#education" className="hover:text-violet-400 transition hidden sm:block">Education</a>
+            <a href="#education" className="hover:text-violet-400 transition sm:hidden">Edu</a>
+          </div>
         </nav>
       </header>
 
-      
+      {/* Hero Section */}
       <section id="hero" className="min-h-screen flex flex-col justify-center items-center text-center px-6">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">Caleb Zeringue</h1>
         <p className="text-xl md:text-2xl text-gray-400 mb-6">Computer Science Student | Software Engineer</p>
@@ -46,18 +46,18 @@ export default function Home() {
         </div>
       </section>
 
-   
+      {/* About Section */}
       <section id="about" className="py-20 px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
         <p className="text-lg text-gray-300 leading-relaxed">
           I'm a Computer Science student at Louisiana State University with a concentration in Software Engineering, 
           expecting to graduate in Fall 2026. I have experience building full-stack web applications, mobile apps, 
-          compilers, and AI-powered tools. I'm passionate about creating software that solves real problems and 
-          constantly learning new technologies.
+          compilers, AI-powered tools, and cybersecurity education platforms. I'm passionate about creating software 
+          that solves real problems and constantly learning new technologies.
         </p>
       </section>
 
-     
+      {/* Skills Section */}
       <section id="skills" className="py-20 px-6 bg-gray-800">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
@@ -93,6 +93,8 @@ export default function Home() {
               <ul className="space-y-2 text-gray-300">
                 <li>Firebase</li>
                 <li>SQLite</li>
+                <li>Supabase (PostgreSQL)</li>
+                <li>MySQL</li>
                 <li>Windows</li>
                 <li>macOS</li>
               </ul>
@@ -101,13 +103,35 @@ export default function Home() {
         </div>
       </section>
 
-     
+      {/* Projects Section */}
       <section id="projects" className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
           
           <div className="space-y-12">
-           
+            {/* Project 1 - Vigiloo */}
+            <div className="bg-gray-800 rounded-lg p-6">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <h3 className="text-2xl font-semibold text-violet-400">Vigiloo</h3>
+                <span className="text-gray-400">January – May 2026</span>
+              </div>
+              <p className="text-sm text-gray-400 mb-4">Next.js, TypeScript, Supabase, Tailwind CSS, PostgreSQL</p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Built a full-stack Duolingo-style cybersecurity education platform with a team of 6 to teach non-technical users how to identify, avoid, and report scams, fraud, and phishing attacks</li>
+                <li>• Created age-specific learning paths with interactive lesson modules, flashcards for cybersecurity terminology, and daily quizzes</li>
+                <li>• Integrated AI into 3 different social media demos simulating scammer interactions on Instagram, Snapchat, and TikTok</li>
+                <li>• Implemented live scam news feed on home page and dedicated news page pulling real-time fraud alerts from Supabase</li>
+              </ul>
+              <a 
+                href="https://github.com/sngu114/Vigiloo" 
+                target="_blank"
+                className="inline-block mt-4 text-violet-400 hover:text-violet-300"
+              >
+                View on GitHub →
+              </a>
+            </div>
+
+            {/* Project 2 - BrainScan AI */}
             <div className="bg-gray-800 rounded-lg p-6">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <h3 className="text-2xl font-semibold text-violet-400">BrainScan AI</h3>
@@ -129,7 +153,7 @@ export default function Home() {
               </a>
             </div>
 
-            
+            {/* Project 3 - C-Dialect Compiler */}
             <div className="bg-gray-800 rounded-lg p-6">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <h3 className="text-2xl font-semibold text-violet-400">C-Dialect Compiler</h3>
@@ -150,7 +174,29 @@ export default function Home() {
               </a>
             </div>
 
-           
+            {/* Project 4 - Sendrr Webmail App */}
+            <div className="bg-gray-800 rounded-lg p-6">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <h3 className="text-2xl font-semibold text-violet-400">Sendrr Webmail App</h3>
+                <span className="text-gray-400">March – May 2026</span>
+              </div>
+              <p className="text-sm text-gray-400 mb-4">Python, Flask, MySQL, HTML/CSS</p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Built a full-stack webmail application with a team in Cybersecurity class — goal was to create a web app, find vulnerabilities, then fix them</li>
+                <li>• Designed and implemented a MySQL database schema with users, emails, and sessions tables to support authentication, messaging, and admin activity tracking</li>
+                <li>• Identified and documented multiple security vulnerabilities including plain text password storage, SQL injection, no DoS protection, and insecure Flask key</li>
+                <li>• Maintained two separate GitHub branches representing vulnerable and secured versions for side-by-side security comparison</li>
+              </ul>
+              <a 
+                href="https://github.com/justinat0r/CSC2361Project" 
+                target="_blank"
+                className="inline-block mt-4 text-violet-400 hover:text-violet-300"
+              >
+                View on GitHub →
+              </a>
+            </div>
+
+            {/* Project 5 - Music Social Media App */}
             <div className="bg-gray-800 rounded-lg p-6">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <h3 className="text-2xl font-semibold text-violet-400">Music Social Media App</h3>
@@ -172,7 +218,7 @@ export default function Home() {
               </a>
             </div>
 
-            
+            {/* Project 6 - Lexer + Parser */}
             <div className="bg-gray-800 rounded-lg p-6">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <h3 className="text-2xl font-semibold text-violet-400">Lexer + Recursive Descent Parser</h3>
@@ -193,7 +239,7 @@ export default function Home() {
               </a>
             </div>
 
-           
+            {/* Project 7 - Car Detailing Database */}
             <div className="bg-gray-800 rounded-lg p-6">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <h3 className="text-2xl font-semibold text-violet-400">Car Detailing Database</h3>
@@ -218,7 +264,7 @@ export default function Home() {
         </div>
       </section>
 
-      
+      {/* Experience Section */}
       <section id="experience" className="py-20 px-6 bg-gray-800">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Experience</h2>
@@ -260,7 +306,7 @@ export default function Home() {
         </div>
       </section>
 
-     
+      {/* Education Section */}
       <section id="education" className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Education</h2>
@@ -275,16 +321,16 @@ export default function Home() {
               Data Structures & Algorithms, Computer Organization & Design, Object Oriented Design, 
               Programming Languages, Artificial Intelligence, Compiler Construction, Database Management, 
               Operating Systems, Video Game Design, Intro to Cybersecurity and Cyber Defense, 
-              Software Systems Development
+              Software Systems Development, Software Quality and Testing, Digital Forensics
             </p>
           </div>
         </div>
       </section>
 
-      
+      {/* Footer */}
       <footer className="py-8 px-6 bg-gray-950 text-center text-gray-400">
-        <p>© 2025 Caleb Zeringue</p>
-        <p className="text-sm mt-2">Last updated: February 2025</p>
+        <p>© 2026 Caleb Zeringue</p>
+        <p className="text-sm mt-2">Last updated: April 2026</p>
       </footer>
     </main>
   );
